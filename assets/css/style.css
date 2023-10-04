@@ -1,0 +1,336 @@
+.ro-nav-list li{
+
+    list-style: none;
+   
+}
+.navbar{
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+
+}
+.ro-nav-list li a{
+    text-decoration: none;
+    color: black;
+}
+.ro-nav-list li a:hover{
+    color: red;
+}
+
+.ro-hr{
+    display: inline-block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    font-weight: bolder;
+
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show,.nav-link a{
+  color: #252525;
+  font-weight: bold;
+}
+.ro-nav-item .nav-item{
+ margin: 1px 0.3rem;
+
+}
+.ro-nav-item li:hover{
+  background-color: rgb(239, 80, 44);
+  border-radius: 5px;
+}
+
+.ro-drop{
+max-height: 200px;
+overflow-y: scroll;
+margin-top: -20px;
+border-radius: 0;
+    
+}
+.ro-drop img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.ro-flag{
+  width: 25px;
+   height: 25px;
+   margin-right: 8px;
+}
+/* end navbar */
+
+/* ------------------------- */
+
+
+/*start carosel */
+#carouselExampleCaptions{
+  margin: 0;
+}
+.carousel-inner{
+  height: 100vh;
+}
+.ro-position{
+  position: relative;
+
+}
+.ro-right-cap{
+  position: absolute;
+  display: inline-block;
+  
+  z-index: 5;
+  width: 40%;
+  left: 50%;
+  
+ 
+  top:20%;
+
+}
+.ro-right-cap2{
+  position: absolute;
+  top:15%;
+  
+  z-index: 5;
+  width: 40%;
+  left: 5%;
+  color: #252525;
+
+}
+
+.big-p{
+  font-size: 4.5rem;
+  font-weight: bolder;
+}
+.ro-carousel-btn{
+  padding: 12px 50px;
+  background-color: transparent;
+color: white;
+border-radius: 25px;
+border: 3px solid white;
+margin-top: 10px;
+font-size: 20px;
+
+}
+.ro-right-cap2 .ro-carousel-btn{
+  color: #252525;
+border: 3px solid #252525;
+font-weight: 600;
+
+}
+.ro-carousel-btn:hover{
+  background-color: red;
+  transition: 1s;
+  border-color: red;
+}
+
+/* end carousel */
+.essntial{
+  position: relative;
+  padding-top: 30px;
+  overflow-y: hidden;
+}
+/* start pulse */
+
+
+.ro-height{
+  height: 800px;
+  overflow-y: hidden;
+}
+
+.pulse-1, .pulse-2 ,.pulse-3,.pulse-4{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: black;
+  animation: animat 2s linear 2s infinite;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+  z-index: 3;
+  margin-right: 10px;
+  position: absolute;
+
+}
+.h-hr{
+  position: absolute;
+  width: 1px;
+  height: 120px;
+  background-color: #252525;
+  z-index: 8;
+  text-align: center;
+
+}
+.h-hr-2{
+  height: 200px;
+}
+.ro-mobile-point{
+  position: absolute;
+  width: 100%;
+ 
+  bottom: 39.5%;
+
+}
+.ro-mobile-point .pulse-4{
+
+  right:12% ;
+
+
+}
+
+
+.ro-mobile-point .pulse-3{
+
+  right:40% ;
+
+
+}
+.ro-mobile-point .pulse-2{
+
+  left:15% ;
+
+
+}
+.ro-mobile-point .pulse-1{
+left: 36.5%;
+
+
+}
+
+
+
+/* .ro-top-20{
+  position: absolute;
+  top: 100px;
+  left: 21%
+}
+.ro-top-2{
+  position: absolute;
+  top: 100px;
+  right: -2%;
+}
+.ro-right-1{
+  position: absolute;
+  right: 24%;
+
+}
+ */
+ .ro-margin-top{
+  margin-top: 140px;
+  width:200px;
+  text-align: center;
+  transform: translateX(-50%);
+ }
+ .ro-margin-top-2{
+  margin-top: 220px;
+
+ }
+
+/* .ro-mobile-point:nth-child(2){
+
+}
+.ro-mobile-point:nth-child(2){
+  right: 50%;
+}
+.ro-mobile-point:nth-child(3){
+  right: 60%;
+}
+.ro-mobile-point span:nth-child(4){
+
+  right: 80%;
+} */
+
+@keyframes animat {
+
+  0%{
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7) , 0 0 0 0 rgba(255, 0, 0, 0.7);
+    
+  }
+
+  40%{
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0),0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+
+  70%{
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0),0 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  100%{
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0),0 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  
+}
+
+
+
+/*start mobile */
+.ro-box{
+  display: flex;
+  gap: 10px;
+  margin: 15px 5px;
+}
+.ro-box p{
+  width: 60%;
+}
+
+
+
+@media screen and (min-width: 736px) and (max-width: 1100px) {
+  .slidesContainer {
+    width: 38.9em;}
+
+    html{
+      font-size: 13px;
+    }
+    .big-p{
+      font-size: 30px;
+      font-weight: bolder;
+    }
+  }
+  @media screen and (max-width:992px)
+ {
+  .essntial-flex{
+    flex-direction: column;
+    gap: 30px;
+  
+  }
+  .ro-margin-top{
+    width: 100px;
+  }
+
+  
+  
+  
+}
+
+@media screen and (max-width: 736px) {
+  .slidesContainer {
+    width: 19.3em;
+  }
+  .big-p{
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  .ro-right-cap{
+    background-color: white;
+
+    width: 90%;
+    top: 0;
+    left: 0;
+   
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 5px auto ;
+    color: black;
+
+  }
+  .ro-carousel-btn{
+    color: black;
+    border-color: black;
+
+  }
+  .ro-height{
+    height: 500px;
+    
+  }
+}
+@media screen and (max-width: 450px){
+  .ro-height{
+    height: 300px;
+    
+  }
+
+}
+
