@@ -7,21 +7,20 @@
   <title>Phono - Task 5 FocalX</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-
-
   <header>
+    <div class="ro-nav-head container-fluid ">
+      <div class="ro-nav2 d-flex text-white bg-dark container-fluid  align-items-center mx-0 flex-wrap">
+        <p class="m-0 mx-auto">Long Weekend Sale Up to 50% OFF Shop Now</p>
+        <span><i class="fa-solid fa-times fs-4" onclick="hide()"></i> </span>
+        </button>
+      </div>
+    </div>
 
     <!--start navbar-->
 
@@ -31,8 +30,8 @@
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbar-content">
           <div class="hamburger-toggle">
-            <div class="hamburger">
-              <i class="fas fa-bars navbar-toggler text-black" onclick="markX()"></i>
+            <div class="hamburger " onclick="closeMark()">
+              <i class="fas fa-bars navbar-toggler text-black fs-3 ro-close"></i>
 
             </div>
 
@@ -44,12 +43,12 @@
           <div class="d-flex ms-auto">
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ro-nav-item">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active ro-bg-li" aria-current="page" href="#">Home</a>
               </li>
 
 
               <li class="nav-item dropdown dropdown-mega position-static">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle active ro-bg-li" href="#" data-bs-toggle="dropdown"
                   data-bs-auto-close="outside">Collection</a>
 
                 <div class="dropdown-menu shadow">
@@ -146,21 +145,21 @@
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link active " href="#">SHop</a>
+                <a class="nav-link active ro-bg-li" href="#">SHop</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active " href="#">Android</a>
+                <a class="nav-link active ro-bg-li" href="#">Android</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active " href="#">Accessories</a>
+                <a class="nav-link active ro-bg-li" href="#">Accessories</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active " href="#">Memory & Stage</a>
+                <a class="nav-link active ro-bg-li" href="#">Memory & Stage</a>
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"
-                  data-bs-auto-close="outside">Pages</a>
+                <a class="nav-link dropdown-toggle active ro-bg-li" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside ">Pages</a>
                 <ul class="dropdown-menu shadow">
                   <li><a class="dropdown-item" href="#">About Us</a></li>
                   <li>
@@ -175,26 +174,22 @@
                     <hr class="dropdown-divider">
                   </li>
                   <li><a class="dropdown-item" href="blog.html">Feq's</a></li>
-
-
-
                 </ul>
               </li>
 
-
-              <li class="nav-item nav-link">
+              <li class="nav-item nav-link ro-bg-li">
                 <a href=""><i class="fa-solid fa-user"></i>
               </li>
-              <li class="nav-item nav-link">
+              <li class="nav-item nav-link ro-bg-li">
                 <a href=""> <i class="fa-solid fa-cart-shopping "></i></a>
               </li>
 
-              <li class="nav-item nav-link">
+              <li class="nav-item nav-link ro-bg-li">
                 <a href=""> <i class="fas fa-search "></i></a>
               </li>
 
               <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle active ro-bg-li" href="#" data-bs-toggle="dropdown"
                   data-bs-auto-close="outside"> <img src="./assets/images/UA-3373319.png" alt="uae" class="ro-flag">UAE
                 </a>
                 <ul class="dropdown-menu  ro-drop">
@@ -265,16 +260,7 @@
                 </ul>
               </li>
 
-
-
-
-
-
-
             </ul>
-
-
-
           </div>
         </div>
       </div>
@@ -283,6 +269,8 @@
   </header>
   <main>
 
+    <!-- BUTTON top scroll -->
+    <button class=" toTop"><i class="fa-solid fa-arrow-up"></i></button>
 
     <!-- start hero carousel -->
 
@@ -290,7 +278,7 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active ro-position ">
-          <img src="./assets/images/phono-slider-1.jpg" class="d-block w-100 " alt="slide photo">
+          <img src="./assets/images/phono-slider-1.jpg" class="d-block w-100 img-fluid " alt="slide photo">
           <div class="carousel-caption ro-right-cap">
             <h5 class="fs-1">ZANIA BLACK EDIT</h5>
             <p class="big-p">CURVY BEVEL DUAL AUDIO</p>
@@ -308,14 +296,13 @@
         </div>
         <div class="carousel-item">
           <img src="./assets/images/phono-slider-2.jpg" class="d-block w-100" alt="slide photo">
-          <div class="carousel-caption ro-right-cap2">
+          <div class="carousel-caption   ro-right-cap2">
             <h5 class="fs-1">ZANIA BLACK EDIT</h5>
             <p class="big-p">FULL SCREEN DISPLAY</p>
             <button class="ro-carousel-btn">SHOP NOW</button>
           </div>
 
         </div>
-
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev">
@@ -337,8 +324,7 @@
 
     <!-- start what makes essential defferent -->
 
-
-    <div class="essntial container  text-center ">
+    <div class="essntial container  text-center py-5">
       <div class="mb-2">
         <h2>WHAT MAKES THE ESSENTIAL DIFFERENT?</h2>
         <p>EXPERIENCE HIGH PERFORMANCE AND SECURE</p>
@@ -427,8 +413,8 @@
 
 
 
-     <!-- start INNOVATIVE QUALITIES -->
-     <div class=" py-5">
+    <!-- start INNOVATIVE QUALITIES -->
+    <div class=" py-5">
       <div class="mb-2 text-center py-5">
         <h2>INNOVATIVE QUALITIES & FEATURES</h2>
         <p>SHOW YOURS TO THE WORLD</p>
@@ -496,15 +482,15 @@
 
 
     <!--start new arrival -->
-    <div class="py-5">
+    <div class="py-5 container">
       <div class="mb-2 text-center py-5">
         <h2>NEW ARRIVALS</h2>
         <p>FIND THE PERFECT PHONE FOR YOU</p>
       </div>
 
-      <div class="slide-container swiper">
+      <div class="slide-container swiper ">
         <div class="slide-content">
-          <div class="card-wrapper swiper-wrapper cards-area">
+          <div class="card-wrapper swiper-wrapper cards-area ">
 
           </div>
         </div>
@@ -514,22 +500,6 @@
       </div>
     </div>
     <!-- end new arrival -->
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
 
 
     <!-- start SEE WHY CUSTOMERS -->
@@ -550,41 +520,58 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne">1. What is HTML?</button>
+                  data-bs-target="#collapseOne">NEW GRADIENT COLOR FINISHES?</button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
                 <div class="card-body">
-                  <p>HTML stands for HyperText Markup Language. HTML is the standard markup language for describing
-                    the
-                    structure of web pages. <a href="https://www.tutorialrepublic.com/html-tutorial/"
-                      target="_blank">Learn more.</a></p>
+                  <p>Rierem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui official.</p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
                 <button type="button" class="accordion-button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo">2. What is Bootstrap?</button>
+                  data-bs-target="#collapseTwo">FOUR-SIDED CURVED CERAMIC BODY</button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
                 <div class="card-body">
-                  <p>Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web
-                    development. It is a collection of CSS and HTML conventions. <a
-                      href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn
-                      more.</a></p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla </p>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree">3. What is CSS?</button>
+                  data-bs-target="#collapseThree">4000MAH HIGH-CAPACITY BATTERY</button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
                 <div class="card-body">
-                  <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a
-                    given HTML element such as colors, backgrounds, fonts etc. <a
-                      href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam pariatur quam consequatur?
+                    Cumque, velit doloribus eos reiciendis ipsum at maxime placeat harum sit suscipit odit a laborum,
+                    repudiandae iste corrupti cupiditate doloremque. Corporis rem officiis, sed minima laudantium
+                    aperiam cupiditate quis voluptatibus molestias voluptas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree">FULLY HIDDEN CAMERA LENS</button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="card-body">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam pariatur quam consequatur?
+                    Cumque, velit doloribus eos reiciendis ipsum at maxime placeat harum sit suscipit odit a laborum,
+                    repudiandae iste corrupti cupiditate doloremque. Corporis rem officiis, sed minima laudantium
+                    aperiam cupiditate quis voluptatibus molestias voluptas.</p>
                 </div>
               </div>
             </div>
@@ -609,13 +596,13 @@
       <p>SUBSCRIBE NOW</p>
       <p class="fs-2">GET OUR UPDATES ALWAYS FAST</p>
       <p>YOUR PERSONAL DATA WILL ALWAYS BE SAFE</p>
-    
+
       <div class="btn-email">
         <input type="email" placeholder="Enter your email id" />
         <button><i class="fa-solid fa-angle-right"></i></button>
       </div>
 
-     
+
       <ul class="ro-footer-ul">
         <li><a href="">SEARCH</a></li>
         <li>|</li>
@@ -632,34 +619,33 @@
       </ul>
 
 
-     
+
     </div>
-    
+
   </footer>
-    <!-- Copyright -->
-    <div class="d-flex justify-content-between flex-wrap  container-fluid" style="background-color: gray">
-      <div class="py-0">
-        <p>
-      © 2023 Copyright: Rayan Obeid <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+  <!-- Copyright -->
+  <div class="d-flex justify-content-between flex-wrap  container-fluid div-footer" >
+    <div class="py-0">
+      <p>
+        © 2023 Copyright: Rayan Obeid <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
       </p>
-      </div> 
-      <div class="py-0">
-        <img src="./assets/images/img-visa.png" alt="logo" class="ro-footer-img">
-        <img src="./assets/images/img-amex.png" alt="logo" class="ro-footer-img">
-        <img src="./assets/images/img paypal.jfif" alt="logo" class="ro-footer-img">
-        <img src="./assets/images/img-discover.png" alt="logo" class="ro-footer-img">
-        <img src="./assets/images/img-master card.png" alt="logo" class="ro-footer-img">
-      </div>
-      
     </div>
-    <!-- Copyright -->
-  
-  <!-- Footer -->
+    <div class="py-0">
+      <img src="./assets/images/img-visa.png" alt="logo" class="ro-footer-img">
+      <img src="./assets/images/img-amex.png" alt="logo" class="ro-footer-img">
+      <img src="./assets/images/img paypal.jfif" alt="logo" class="ro-footer-img">
+      <img src="./assets/images/img-discover.png" alt="logo" class="ro-footer-img">
+      <img src="./assets/images/img-master card.png" alt="logo" class="ro-footer-img">
+    </div>
+
+  </div>
+  <!-- Copyright -->
 
   <!-- Footer -->
 
+  <!-- Footer -->
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+
 
 
 

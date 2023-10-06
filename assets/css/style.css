@@ -1,23 +1,68 @@
-.ro-nav-list li {
-
-  list-style: none;
-
+ 
+/* 
+ div above nav */
+.ro-nav-head{
+  z-index: 99;
+  position: fixed;
+top: 0;
+margin: 0;
+  padding: 0;
 }
+
+.ro-nav2{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  width: 100%;
+  
+  position: relative;
+}
+a:hover,.ro-nav-head p:hover,.ro-nav-head span:hover{
+  color: #eb0028;
+  transition-duration: 0.8s;
+}
+
+
+/* to top button*/
+.toTop{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  border-radius: 50%;
+  right: 20px;
+  background-color: #252525;
+  color: white;
+  border: none;
+  z-index: 40;
+}
+.toTop:hover{
+  background-color: red;
+
+  transition-duration: 0.5s;
+}
+/* end to top */
+
+
+/* start navbar */
 
 .navbar {
   position: fixed;
-  z-index: 10;
   background-color: white;
 
+  z-index: 60;
+  top: 0;
+}
+.ro-nav-list li {
+  list-style: none;
 }
 
 .ro-nav-list li a {
   text-decoration: none;
-  color: black;
+  color: #252525;
 }
-
-.ro-nav-list li a:hover {
-  color: red;
+.ro-nav-list li a:hover{
+  color: #eb0028;
 }
 
 .ro-hr {
@@ -25,7 +70,6 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 15px;
   font-weight: bolder;
-
 }
 
 .navbar-nav .nav-link.active,
@@ -40,9 +84,10 @@
 
 }
 
-.ro-nav-item li:hover {
+.ro-bg-li:hover {
   background-color: rgb(239, 80, 44);
   border-radius: 5px;
+  color: white;
 }
 
 .ro-drop {
@@ -50,7 +95,6 @@
   overflow-y: scroll;
   margin-top: -20px;
   border-radius: 0;
-
 }
 
 .ro-drop img {
@@ -71,13 +115,13 @@
 
 
 /*start carosel */
+
 #carouselExampleCaptions {
   margin: 0;
+  margin-top: 60px;
 }
 
-.carousel-inner {
-  height: 100vh;
-}
+
 
 .ro-position {
   position: relative;
@@ -145,10 +189,8 @@
 }
 
 /* start pulse */
-
-
 .ro-height {
-  height: 800px;
+  height: 900px;
   overflow-y: hidden;
 }
 
@@ -161,11 +203,9 @@
   border-radius: 50%;
   background-color: black;
   animation: animat 2s linear 2s infinite;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
   z-index: 3;
   margin-right: 10px;
   position: absolute;
-
 }
 
 .h-hr {
@@ -175,7 +215,6 @@
   background-color: #252525;
   z-index: 8;
   text-align: center;
-
 }
 
 .h-hr-2 {
@@ -185,82 +224,23 @@
 .ro-mobile-point {
   position: absolute;
   width: 100%;
-
   bottom: 39.5%;
-
 }
 
 .ro-mobile-point .pulse-4 {
-
   right: 12%;
-
-
 }
 
-
 .ro-mobile-point .pulse-3 {
-
   right: 40%;
-
-
 }
 
 .ro-mobile-point .pulse-2 {
-
   left: 15%;
-
-
 }
-
 .ro-mobile-point .pulse-1 {
   left: 36.5%;
-
-
 }
-
-
-
-/* .ro-top-20{
-  position: absolute;
-  top: 100px;
-  left: 21%
-}
-.ro-top-2{
-  position: absolute;
-  top: 100px;
-  right: -2%;
-}
-.ro-right-1{
-  position: absolute;
-  right: 24%;
-
-}
- */
-.ro-margin-top {
-  margin-top: 140px;
-  width: 200px;
-  text-align: center;
-  transform: translateX(-50%);
-}
-
-.ro-margin-top-2 {
-  margin-top: 220px;
-
-}
-
-/* .ro-mobile-point:nth-child(2){
-
-}
-.ro-mobile-point:nth-child(2){
-  right: 50%;
-}
-.ro-mobile-point:nth-child(3){
-  right: 60%;
-}
-.ro-mobile-point span:nth-child(4){
-
-  right: 80%;
-} */
 
 @keyframes animat {
 
@@ -284,28 +264,25 @@
 }
 
 
-
-/* start caro card */
-/* .my-carousel-progress {
-  background: #ccc;
+.ro-margin-top {
+  margin-top: 140px;
+  width: 200px;
+  text-align: center;
+  transform: translateX(-50%);
 }
 
-.my-carousel-progress-bar {
-  background: greenyellow;
-  height: 2px;
-  transition: width 400ms ease;
-  width: 0;
-} */
-/* end caro card */
+.ro-margin-top-2 {
+  margin-top: 220px;
+
+}
 
 
-/*start mobile */
+/*start mobile center*/
 .ro-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
 .ro-box {
   display: flex;
   gap: 25px;
@@ -320,15 +297,8 @@
   object-fit: contain;
 }
 
-/* .ro-qualities .first-child,.ro-qualities .third-child{
-  width: 250px;
-} */
 
-/* .ro-box p{
-  width: 90%;
-} */
-
-/* start customer */
+/* start customer accordion */
 .re-customer {
   background-image: url("../images/footer_ad0f20f1-29b5-4188-8127-a6667ac6aea9.jpg");
 }
@@ -337,23 +307,19 @@
   justify-content: space-between;
 }
 .accordion{
-  width: 500px;
+  width: 500px; 
   margin: auto;
 }
-
 .accordion-button::after {
   background-image: none;
   content: "+";
     position: absolute;
-    right: 10px;
+    right: 5px;
     top: 15%;
-    transition: all 1s ease-in-out;
     display: block;
-    width: 8px;
-    height: 8px;
-    font-size: 20px;
-
-  transform: scale(.7) !important;
+    width: 15px;
+    height: 15px;
+    font-size: 30px;
 }
 button.accordion-button.collapsed{
   font-size: 20px;
@@ -362,18 +328,13 @@ button.accordion-button.collapsed{
   background-image: none;
   content: "-";
     position: absolute;
-    right: 20px;
-    top: 15%;
-    transition: all 1s ease-in-out;
+    right: 5px;
+    top: 75%;
     display: block;
     font-weight: bolder;
-    height: 10px;
-    width: 30px;
-    
-    font-size: 20px !important;
-
-  transform: scale(.7) !important;
-  color:blue;
+    height: 15px;
+    width: 15px;
+    font-size: 30px;
 }
 
 .accordion .accordion-item,.accordion-item h2 button{
@@ -382,120 +343,31 @@ button.accordion-button.collapsed{
   border: none;
   width: 100%;
   display: block;
-
 }
 .accordion-item h2 button {
   border: none;
 }
-
-
-
 /* end customer */
 
 
-@media screen and (max-width: 1150px) {
-  .slidesContainer {
-    width: 38.9em;
-  }
-
-  html {
-    font-size: 13px;
-  }
-
-  .big-p {
-    font-size: 30px;
-    font-weight: bolder;
-  }
-
-  .ro-grid {
-    grid-template-columns: repeat(2, 1fr);
-
-  }
-
-  .second-child {
-
-    grid-area: 1/1/2/3;
-    margin: auto;
-    text-align: center;
-
-  }
-
-  .ro-box {
-    flex-direction: column;
-    gap: 0;
-
-  }
-
-  .first-child {
-    direction: rtl;
-  }
-
-  .first-child img {}
-
-
-  .first-child .ro-box {
-    flex-direction: column-reverse;
-  }
-
-
-
+/* start new arrival */
+.ro-swiper-img{
+  height: 250px;
+  object-fit: contain;
+  margin: 20px 0;
 }
-
-@media screen and (max-width:992px) {
-  .essntial-flex {
-    flex-direction: column;
-    gap: 30px;
-
-  }
-
-  .ro-margin-top {
-    width: 100px;
-  }
-  .ro-accordion{
-    flex-direction: column;
-  }
-
-
-
-
+.ro-card-body{
+  background-color: #eee;
+  font-size: 18px;
 }
-
-@media screen and (max-width: 736px) {
-  .slidesContainer {
-    width: 19.3em;
-  }
-
-  .big-p {
-    font-size: 18px;
-    font-weight: bolder;
-  }
-
-  .ro-right-cap {
-    background-color: white;
-
-    width: 90%;
-    top: 0;
-    left: 0;
-
-    display: inline-block;
-    padding: 5px 20px;
-    margin: 5px auto;
-    color: black;
-
-  }
-
-  .ro-carousel-btn {
-    color: black;
-    border-color: black;
-
-  }
-
-  .ro-height {
-    height: 500px;
-
-  }
+.card{
+  width: 250px;
 }
-
+.card-title{
+  font-size: 23px;
+  color: #eb0028;
+}
+/* end new arrival */
 /* start footer */
 footer{
   background-image: url("../images/footer_ad0f20f1-29b5-4188-8127-a6667ac6aea9.jpg");
@@ -506,16 +378,12 @@ footer{
   position: relative;
   margin: 40px auto;
 
-
-
 }
 footer input{
   max-width: 400px;
   width: 100%;
   border-radius: 30px;
   padding: 10px;
-
-
 }
 .btn-email button{
   position: absolute;
@@ -556,7 +424,126 @@ footer input{
  
   object-fit: fill;
 }
+.div-footer{
+  padding: 10px;
+  background-color: #ccc;
+}
+.div-footer p{
+  margin: 0;
+  padding: 0;
+}
 /* end footer */
+
+
+
+@media screen and (max-width: 1150px) {
+  .slidesContainer {
+    width: 38.9em;
+  }
+
+  html {
+    font-size: 13px;
+  }
+
+  .big-p {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .ro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .second-child {
+
+    grid-area: 1/1/2/3;
+    margin: auto;
+    text-align: center;
+  }
+
+  .ro-box {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .first-child {
+    direction: rtl;
+  }
+
+  .first-child .ro-box {
+    flex-direction: column-reverse;
+  }
+  .ro-accordion{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+}
+
+@media screen and (max-width:992px) {
+  .essntial-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ro-margin-top {
+    width: 100px;
+  }
+  
+}
+
+@media screen and (max-width: 736px) {
+  .slidesContainer {
+    width: 19.3em;
+  }
+
+  .big-p {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  .carousel-inner{
+    height: 35vh;
+  }
+  
+.ro-right-cap2{
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  z-index: 80;
+}
+
+  .ro-right-cap,  .ro-right-cap2{
+    background-color: white;
+    position: absolute;
+    height: fit-content;
+
+    max-width: 300px;
+    width: 100%;
+    transform: translate(-50%,15%);
+    top: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin: 5px auto;
+    color: black;
+    z-index: 90;
+  }
+  .ro-right-cap2{
+    transform: translate(0,15%);
+  
+  }
+  
+  .ro-carousel-btn {
+    color: black;
+    border-color: black;
+  }
+
+  .ro-height {
+    height: 500px;
+  }
+}
+
 
 @media screen and (max-width:600px) {
   .ro-grid {
@@ -586,15 +573,31 @@ footer input{
   .ro-box img {
     margin: auto;
   }
-
-
-
+  .accordion{
+    width: 400px;
+  }
+  .accordion-header{
+    font-size: 16px;
+  }
+  .accordion .accordion-button{
+    font-size: 14px;
+  }
+  .ro-nav-head{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .ro-height {
     height: 300px;
-
   }
-
+  .accordion{
+    width: 250px;
+  }
+  .ro-right-cap{
+    transform: translate(-50%,0);
+  }
+  .ro-right-cap2{
+    transform: translate(0,0);
+  }
 }
