@@ -50,7 +50,7 @@ a:hover,.ro-nav-head p:hover,.ro-nav-head span:hover{
   position: fixed;
   background-color: white;
 
-  z-index: 60;
+  z-index: 10;
   top: 0;
 }
 .ro-nav-list li {
@@ -527,7 +527,7 @@ footer input{
     padding: 20px 20px;
     margin: 5px auto;
     color: black;
-    z-index: 90;
+    z-index: 10;
   }
   .ro-right-cap2{
     transform: translate(0,15%);
@@ -541,6 +541,12 @@ footer input{
 
   .ro-height {
     height: 500px;
+  }
+
+  .navbar{
+    position: absolute;
+    top: 0;
+    z-index: 25;
   }
 }
 
@@ -599,5 +605,9 @@ footer input{
   }
   .ro-right-cap2{
     transform: translate(0,0);
+  }
+  .px-4 ,.px-5{
+    padding-left: 0 !important;
+    padding-right: 0  !important;
   }
 }
