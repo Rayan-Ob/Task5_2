@@ -351,21 +351,24 @@ button.accordion-button.collapsed{
 
 
 /* start new arrival */
-.ro-swiper-img{
+ .ro-swiper-img{
   height: 250px;
   object-fit: contain;
   margin: 20px 0;
 }
-.ro-card-body{
+ .ro-card-body{
   background-color: #eee;
   font-size: 18px;
 }
-.card{
-  width: 250px;
-}
+
 .card-title{
   font-size: 23px;
   color: #eb0028;
+} 
+
+.slide-container{
+  max-width: 1200px;
+  width: 100%;
 }
 /* end new arrival */
 /* start footer */
