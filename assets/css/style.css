@@ -314,12 +314,12 @@ a:hover,.ro-nav-head p:hover,.ro-nav-head span:hover{
   background-image: none;
   content: "+";
     position: absolute;
-    right: 5px;
-    top: 15%;
+    top: 10%;
     display: block;
     width: 15px;
     height: 15px;
     font-size: 30px;
+    left: 100%;
 }
 button.accordion-button.collapsed{
   font-size: 20px;
@@ -328,13 +328,14 @@ button.accordion-button.collapsed{
   background-image: none;
   content: "-";
     position: absolute;
-    right: 5px;
     top: 75%;
     display: block;
     font-weight: bolder;
     height: 15px;
     width: 15px;
     font-size: 30px;
+    left: 100%;
+
 }
 
 .accordion .accordion-item,.accordion-item h2 button{
@@ -584,6 +585,16 @@ footer input{
   }
   .accordion{
     width: 400px;
+    margin: auto;
+  }
+  .accordion p,.accordion h2{
+    width: 80%;
+  }
+  button.accordion-button.collapsed{
+    font-size: 14px;
+  }
+  .accordion h2{
+    margin-right: 10px;
   }
   .accordion-header{
     font-size: 16px;
