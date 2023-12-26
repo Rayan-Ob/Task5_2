@@ -7,19 +7,26 @@ function hide() {
 }
 
 
-// convert burger menu button from bar to X 
-let closeMark = function (icon) {
-  let close = document.querySelector('.ro-close');
-  if (close.classList.contains("fa-bars")) {
 
-    close.innerHTML = ` <i class="fa-solid fa-times navbar-toggler ro-close" style="color: #ff0000;"></i>`;
+
+//convert burger menu button from bar to X 
+  function closeMark(icon) {
+  if (icon.classList.contains("fa-bars")) {
+    icon.classList.remove("fa-bars")
+    icon.classList.add("fa-x")
+    document.querySelector('#closeColor').style.color="red"  
   }
 
-  else if (close.classList.contains("fa-times")) {
-    close.classList.replace("fa-bars", "fa-times")
+  else {
+    icon.classList.remove("fa-x")
+    icon.classList.add("fa-bars")
+    document.querySelector('#closeColor').style.color="black"  
 
-  }
-}
+
+  }}
+  
+
+
 
 
 //fixed button to top
@@ -38,28 +45,31 @@ scrollTop.addEventListener("click", () => {
 
 // pring data from fetch
 const result = fetch("https://dummyjson.com/products")
-
   .then(function (result) {
     return result.json();
   })
   .then(function (result) {
     displayData(result.products);
-
   });
 
 function displayData(arr) {
   let num;
   for (let i = 1; i < 7; i++) {
     let cardsArea = document.querySelector(".cards-area");
-
+    let rate =Math.ceil(Number((arr[i].rating) * 20))
     num = `<div class="card swiper-slide">
       <img src= ${arr[i].images[0]} class="card-img-top ro-swiper-img img-fluid" alt="...">
       <div class="card-body ro-card-body text-center">
         <h5 class="card-title  ">${arr[i].title}</h5>
-        <p class="card-text">Rating : ${Math.ceil(Number((arr[i].rating) * 20))} %</p>
+        <p class="card-text ro-arrivalP">Rating : ${Math.ceil(Number((arr[i].rating) * 20))} %</p>
+        <div class="stars-outer">
+        <div class="stars-inner" style="width: ${rate}px;"></div>
+        </div>
         <p class="text-center">Price : $ ${arr[i].price}</p>
       </div>
     </div>`
+    // document.querySelector('.stars-inner').style.width="50px";
+
     cardsArea.innerHTML += num;
     console.log(arr[i].images[0]);
   }
@@ -78,16 +88,16 @@ var swiper = new Swiper(".slide-content", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  breakpoints:{
-    0:{
+  breakpoints: {
+    0: {
       slidesPerView: 1,
 
     },
-    700:{
+    700: {
       slidesPerView: 2,
 
     },
-    925:{
+    925: {
       slidesPerView: 3,
 
     }

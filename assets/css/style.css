@@ -64,6 +64,9 @@ a:hover,.ro-nav-head p:hover,.ro-nav-head span:hover{
 .ro-nav-list li a:hover{
   color: #eb0028;
 }
+.hamburger{
+  color: black;
+}
 
 .ro-hr {
   display: inline-block;
@@ -77,7 +80,11 @@ a:hover,.ro-nav-head p:hover,.ro-nav-head span:hover{
 .nav-link a {
   color: #252525;
   font-weight: bold;
+
+  width: fit-content !important;
+  padding: 5px 10px;
 }
+
 
 .ro-nav-item .nav-item {
   margin: 1px 0.3rem;
@@ -133,23 +140,39 @@ a:hover,.ro-nav-head p:hover,.ro-nav-head span:hover{
   display: inline-block;
 
   z-index: 5;
+
   width: 40%;
+  
   left: 50%;
+  top: 15%;
+}
 
+.ro-top{
+  top: 15%;
+}
+.big-p {
+  font-size: 4.5rem;
+  font-weight: bolder;
+}
 
-  top: 20%;
-
+.ro-carousel-btn {
+  padding: 20px 50px;
+  background-color: transparent;
+  color: white;
+  border-radius: 25px;
+  border: 3px solid white;
+  margin: 10px auto;
+  font-size: 20px;
+  
 }
 
 .ro-right-cap2 {
   position: absolute;
   top: 15%;
-
   z-index: 5;
   width: 40%;
   left: 5%;
   color: #252525;
-
 }
 
 .big-p {
@@ -165,14 +188,12 @@ a:hover,.ro-nav-head p:hover,.ro-nav-head span:hover{
   border: 3px solid white;
   margin-top: 10px;
   font-size: 20px;
-
 }
 
 .ro-right-cap2 .ro-carousel-btn {
   color: #252525;
   border: 3px solid #252525;
   font-weight: 600;
-
 }
 
 .ro-carousel-btn:hover {
@@ -314,27 +335,27 @@ a:hover,.ro-nav-head p:hover,.ro-nav-head span:hover{
   background-image: none;
   content: "+";
     position: absolute;
-    top: 10%;
+    top: 12%;
     display: block;
     width: 15px;
     height: 15px;
     font-size: 30px;
-    left: 100%;
+    left: 95%;
 }
 button.accordion-button.collapsed{
   font-size: 20px;
 }
 .accordion-button:not(.collapsed)::after {
   background-image: none;
-  content: "-";
+  content: "_";
     position: absolute;
-    top: 75%;
+    top: 100%;
     display: block;
     font-weight: bolder;
     height: 15px;
     width: 15px;
-    font-size: 30px;
-    left: 100%;
+    font-size: 35px;
+    left: 95%;
 
 }
 
@@ -371,10 +392,47 @@ button.accordion-button.collapsed{
   max-width: 1200px;
   width: 100%;
 }
+.ro-arrivalP{
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.stars-outer{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.stars-inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+.stars-outer::before{
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #ccc;
+
+}
+.stars-inner::before{
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #f8ce0b;
+
+}
+
 /* end new arrival */
+
+.accordion-collapse .card-body p{
+  padding: 16px 16.25px;
+}
 /* start footer */
 footer{
   background-image: url("../images/footer_ad0f20f1-29b5-4188-8127-a6667ac6aea9.jpg");
+  padding-top: 40px;
 }
 .btn-email{
   max-width: 400px;
@@ -396,7 +454,7 @@ footer input{
   background-color: black;
   color: white;
   right: 5px;
-  top: 6px;
+  top: 4px;
   z-index: 60;
   border-radius: 50%;
 }
@@ -456,6 +514,10 @@ footer input{
 
   .ro-grid {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+  .ro-grid .ro-box p{
+    width: 80%;
   }
   .second-child {
 
@@ -468,9 +530,14 @@ footer input{
     flex-direction: column;
     gap: 0;
   }
+  .ro-box h3{
+    margin-top: 10px;
+  }
 
   .first-child {
     direction: rtl;
+    margin: auto;
+
   }
 
   .first-child .ro-box {
@@ -519,11 +586,11 @@ footer input{
   .ro-right-cap,  .ro-right-cap2{
     background-color: white;
     position: absolute;
-    height: fit-content;
-
+height: fit-content;
     max-width: 300px;
     width: 100%;
-    transform: translate(-50%,15%);
+    transform: translate(-50%,12%);
+    position: center;
     top: 0;
     display:flex;
     flex-direction: column;
@@ -558,12 +625,19 @@ footer input{
 @media screen and (max-width:600px) {
   .ro-grid {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .ro-box p{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px !important;
   }
 
   .second-child {
 
     grid-area: 1/1/2/2;
     margin: auto;
+    margin-bottom: 40px !important;
   }
 
   .ro-grid div {
@@ -587,9 +661,9 @@ footer input{
     width: 400px;
     margin: auto;
   }
-  .accordion p,.accordion h2{
+  /* .accordion p,.accordion h2{
     width: 80%;
-  }
+  } */
   button.accordion-button.collapsed{
     font-size: 14px;
   }
@@ -605,7 +679,18 @@ footer input{
   .ro-nav-head{
     display: none;
   }
+  .ro-carousel-btn {
+    padding: 10px 30px;
+
+} }
+
+@media screen and (max-width:512px) {
+  .ro-right-cap,  .ro-right-cap2{
+  
+   
+    transform: translate(-50%,9%);}
 }
+
 
 @media screen and (max-width: 450px) {
   .ro-height {
@@ -624,4 +709,8 @@ footer input{
     padding-left: 0 !important;
     padding-right: 0  !important;
   }
+  .ro-carousel-btn {
+    padding: 6px 20px;
+
+} 
 }
