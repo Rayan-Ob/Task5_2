@@ -63,7 +63,7 @@ function displayData(arr) {
         <h5 class="card-title  ">${arr[i].title}</h5>
         <p class="card-text ro-arrivalP">Rating : ${Math.ceil(Number((arr[i].rating) * 20))} %</p>
         <div class="stars-outer">
-        <div class="stars-inner" style="width: ${rate}px;"></div>
+        <div class="stars-inner" style="width: ${rate}%;"></div>
         </div>
         <p class="text-center">Price : $ ${arr[i].price}</p>
       </div>
